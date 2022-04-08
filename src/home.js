@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
 const Home = () => {
     const [cidade, setCidade] = useState('');
@@ -10,9 +10,9 @@ const Home = () => {
 
     const notificar = () => {
         if(cidade == '' || bairro == '' || rua == '' || numero == '') {
-          console.log('Dados invalidos!')
+          Alert.alert('Dados invalidos!')
         } else {
-            console.log("OK")
+            Alert.alert('Notificado!')
         }
       }
 
